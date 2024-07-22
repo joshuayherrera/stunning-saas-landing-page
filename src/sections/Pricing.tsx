@@ -76,7 +76,7 @@ export const Pricing = () => {
             inverse, 
             features 
           }) => (
-            <div className={twMerge("card", 
+            <div key={title} className={twMerge("card", 
               inverse === true && "border-black bg-black text-white")}>
               <div className="flex justify-between">
                 <h3 className={twMerge("text-lg font-bold text-black/50", inverse === true && "text-white/60")}>{title}</h3>
@@ -114,8 +114,8 @@ export const Pricing = () => {
               </button>
 
               <ul className="flex flex-col gap-5 mt-8">
-                {features.map((feature) => (
-                  <li className="text-sm flex items-center gap-4">
+                {features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="text-sm flex items-center gap-4">
                     <CheckIcon className="h-6 w-6" />
                     <span>
                       {feature}
