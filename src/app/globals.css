@@ -20,19 +20,8 @@
         @apply h-8 w-auto 
     }
 
-    @keyframes float {
-        0% {
-          transform: translateY(0px) rotate(30deg);
-        }
-        50% {
-          transform: translateY(-20px) rotate(30deg);
-        }
-        100% {
-          transform: translateY(0px) rotate(30deg);
-        }
-      }
-      
-      .floating {
-        animation: float 3s ease-in-out infinite;
-      }
+    .tag {
+      @apply text-sm inline-flex border border-[#222]/10 
+      px-3 py-1 rounded-lg tracking-tight;
+    }
 }
