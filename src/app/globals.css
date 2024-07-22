@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply bg-black text-white px-4 py-2 rounded-lg font-medium 
+        inline-flex justify-center tracking-tighter;
+    }
+
+    .btn-primary {
+        @apply bg-black text-white;
+    }
+
+    .btn-text{
+        @apply text-black bg-transparent;
+    }
+
+    .logo-ticker-image {
+        @apply h-8 w-auto 
+    }
+
+    @keyframes float {
+        0% {
+          transform: translateY(0px) rotate(30deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(30deg);
+        }
+        100% {
+          transform: translateY(0px) rotate(30deg);
+        }
+      }
+      
+      .floating {
+        animation: float 3s ease-in-out infinite;
+      }
+}
