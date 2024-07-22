@@ -3,6 +3,8 @@ import { Header } from "@/sections/Header";
 import { LogoTicker } from "@/sections/LogoTicker";
 import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Pricing } from "@/sections/Pricing";
+import { Testimonials } from "@/sections/Testimonials";
+import { CallToAction } from "@/sections/CallToAction";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <LogoTicker />
       <ProductShowcase />
       <Pricing />
+      <Testimonials />
+      <CallToAction />
     </>
 );
 }
