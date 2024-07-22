@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 const pricingTiers = [
   {
+    id:1,
     title: "Free",
     monthlyPrice: 0,
     buttonText: "Get started for free",
@@ -17,6 +18,7 @@ const pricingTiers = [
     ],
   },
   {
+    id:2,
     title: "Pro",
     monthlyPrice: 9,
     buttonText: "Sign up now",
@@ -33,6 +35,7 @@ const pricingTiers = [
     ],
   },
   {
+    id:3,
     title: "Business",
     monthlyPrice: 19,
     buttonText: "Sign up now",
@@ -67,6 +70,7 @@ export const Pricing = () => {
         
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map(({ 
+            id,
             title, 
             monthlyPrice, 
             buttonText, 
@@ -74,7 +78,7 @@ export const Pricing = () => {
             inverse, 
             features 
           }) => (
-            <div className={twMerge("card", 
+            <div key={id} className={twMerge("card", 
               inverse === true && "border-black bg-black text-white")}>
               <div className="flex justify-between">
                 <h3 className={twMerge("text-lg font-bold text-black/50", inverse === true && "text-white/60")}>{title}</h3>
