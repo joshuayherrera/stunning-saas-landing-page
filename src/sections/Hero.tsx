@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import ArrowIcon from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
 import cylinderImage from "@/assets/cylinder.png";
